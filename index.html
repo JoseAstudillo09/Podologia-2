@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ficha Clinica</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans&family=Source+Sans+Pro:ital,wght@0,300;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/custom.css">
+
+
+</head>
+<body>
+  <!-- Barra de navegación -->
+  <nav class="navbar navbar-expand-lg navbar navbar-dark bg-primary mb-5 ">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="imagenes/logo-400x140.png" alt="" width="200" height="70">
+      </a>
+      <a href="">Escuela de salud</a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active text-black" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-black" href="#">Ayuda</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-black">Ficha de Observación</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Contenido -->
+  <!-- 1. Antecedentes Personales -->
+  <div class="mx-auto p-1" style="width: 700px;">
+    <form class="row g-3 mb-3 border border-secondary border-2 rounded-3">
+      <div class="input-group mb-3">
+        <input class="form-control" type="text" placeholder="1. Antecedentes Personales" aria-label="Disabled input example" disabled>
+        <span class="input-group-text" id="inputFecha">Fecha</span>
+        <span type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="inputFechaAct" disabled>
+      </div>
+      <div class="col-12">
+        <label for="inputAddress" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="inputNombre" placeholder="Ingrese nombre de paciente">
+      </div>
+      <div class="col-md-6">
+        <label for="inputEmail4" class="form-label">Rut</label>
+        <input type="email" class="form-control" maxlength="10" id="inputRut" placeholder="Ingrese Rut" onkeypress="return valideKey(event);">
+      </div>
+      <div class="col-md-6">
+        <label for="inputPassword4" class="form-label">Telefono</label>
+        <input type="text" class="form-control" maxlength="9" id="inputTelefono" placeholder="Ingrese Telefono" onkeypress="return valideKey(event);">
+      </div>
+      <div class="col-md-3">
+        <label for="inputAddress" class="form-label">Edad</label>
+        <input type="text" class="form-control" maxlength="2" id="inputEdad" placeholder="Ingrese edad" onkeypress="return valideKey(event);"/>
+      </div>
+      <div class="col-md-9">
+        <label for="inputAddress2" class="form-label">Fecha de nacimiento</label>
+        <input type="date" class="form-control" id="inputFechaN" placeholder="Escoja una fecha">
+      </div>
+      <div class="col-md-6">
+        <label for="inputCity" class="form-label">Estado civil</label>
+        <select id="inputEstCivil" class="form-select">
+          <option selected>Seleccione Estado Civil...</option>
+          <option>Casado(a)</option>
+          <option>Conviviente</option>
+          <option>Anulado(a)</option>
+          <option>Separado(a) de unión legal</option>
+          <option>Separado(a) de unión de hecho</option>
+          <option>Viudo(a)</option>
+          <option>Soltero(a)</option>
+        </select>
+      </div>
+      <div class="col-md-6">
+        <label for="inputCity" class="form-label">Previsión</label>
+        <select id="inputPrevision" class="form-select">
+          <option selected>Seleccione Previsión...</option>
+          <option>Casado(a)</option>
+          <option>Conviviente</option>
+          <option>Anulado(a)</option>
+          <option>Separado(a) de unión legal</option>
+          <option>Separado(a) de unión de hecho</option>
+          <option>Viudo(a)</option>
+          <option>Soltero(a)</option>
+        </select>
+      </div>
+      <div class="col-12">
+        <label for="inputAddress" class="form-label">Dirección</label>
+        <input type="text" class="form-control" id="inputDireccion" placeholder="Ingrese Dirección">
+      </div>
+      <div class="col-12 mb-3">
+        <label for="inputAddress" class="form-label">Ocupación</label>
+        <input type="text" class="form-control" id="inputOcupacion" placeholder="Ingrese Ocupación">
+      </div>
+    </form>
+  </div>
+  <!-- 2. Anamnesis Proxima -->
+  <div class="mx-auto p-1"style="width: 700px;">
+    <form class="row g-3 mb-3 border border-secondary border-2 rounded-3">
+      <div class="mb-3">
+        <input class="form-control mb-2" type="text" placeholder="2. Anamnesis Proxima" aria-label="Disabled input example" disabled>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
+    </form>
+  </div> 
+  <script src="./js/scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+
+$font-family-sans-serif: 'Alegreya Sans', sans-serif;
+$font-family-sans-serif: 'Source Sans Pro', sans-serif;
+
+@media (min-width: 992px){
+    .alto-100{
+        height: 100vh;
+    }
+}
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 960px,
+  xxl: 1320px
+);
+
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
