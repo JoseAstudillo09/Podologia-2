@@ -16,18 +16,16 @@
 </head>
 <body>
   <!-- Barra de navegación -->
-  <nav class="navbar navbar-expand-lg navbar navbar-dark bg-primary mb-5 ">
+  <nav class="navbar navbar-expand-lg navbar navbar-dark bg-secondary mb-5 ">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
         <img src="imagenes/logo-400x140.png" alt="" width="200" height="70">
       </a>
-      <a href="">Escuela de salud</a>
-      
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
           <li class="nav-item">
             <a class="nav-link active text-black" aria-current="page" href="#">Home</a>
           </li>
@@ -35,9 +33,15 @@
             <a class="nav-link text-black" href="#">Ayuda</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-black">Ficha de Observación</a>
+            <a class="nav-link text-black" href="#">Ficha de Observación</a>
           </li>
         </ul>
+        <span class="navbar-text ">
+            Escuela de salud
+            <br>
+            <p class="fst-italic">“Humanizando la atención en Salud”</p>
+
+        </span>
       </div>
     </div>
   </nav>
@@ -115,6 +119,68 @@
       </div>
     </form>
   </div> 
+  <!-- 3. Anamnesis Remota -->
+  <div class="mx-auto p-1"style="width: 700px;">
+    <form class="row g-3 mb-3 border border-secondary border-2 rounded-3">
+      <div class="mb-3">
+        <input class="form-control mb-2" type="text" placeholder="3. Anamnesis Remota" aria-label="Disabled input example" disabled>
+      </div>
+      <div class="mb-3 input-group ">
+        <span class="input-group-text me-2 w-25" id="basic-addon1">Farmacología</span>
+        <div class="d-grid gap-2 d-md-block">
+          <button class="btn btn-primary" type="button">Button</button>
+          <button class="btn btn-primary" type="button">Button</button>
+        </div>
+      </div>
+      <div class="mb-3 input-group">
+        <span class="input-group-text me-2 w-25" id="basic-addon1">Enf. Crónicas</span>
+        <div class="d-grid gap-2 d-md-block">
+          <button class="btn btn-primary" type="button">Button</button>
+          <button class="btn btn-primary" type="button">Button</button>
+        </div>
+      </div>      
+      <div class="mb-3 input-group">
+        <span class="input-group-text me-2 w-25" id="basic-addon1">Enf. Respiratorias</span>
+        <div class="d-grid gap-2 d-md-block">
+          <button class="btn btn-primary" type="button">Button</button>
+          <button class="btn btn-primary" type="button">Button</button>
+        </div>
+      </div>      
+      <div class="mb-3 input-group">
+        <span class="input-group-text me-2 w-25" id="basic-addon1">Diabetes</span>
+        <div class="d-grid gap-2 d-md-block">
+          <button class="btn btn-primary" type="button">Button</button>
+          <button class="btn btn-primary" type="button">Button</button>
+        </div>
+        <!-- <div class="col-sm-2">
+          <input class="form-control" type="text" placeholder="Tipo" aria-label="Disabled input example" disabled>
+        </div> -->
+        <div class="input-group mb-3 ms-auto p-2 bd-highlight">
+          <label class="input-group-text" for="inputGroupSelect01">Tipo</label>
+          <select class="form-control" id="inputGroupSelect01">
+            <option selected>Seleccione tipo...</option>
+            <option value="1">Tipo 1</option>
+            <option value="2">Tipo 2</option>
+            <option value="3">Tipo Gestional</option>
+          </select>
+        </div>
+      </div>      
+      <div class="mb-3 input-group">
+        <span class="input-group-text me-2 w-25" id="basic-addon1">Enf. Cardiovasculares</span>
+        <div class="d-grid gap-2 d-md-block">
+          <button class="btn btn-primary" type="button">Button</button>
+          <button class="btn btn-primary" type="button">Button</button>
+        </div> 
+      </div>  
+      <div class="mb-3 input-group">
+        <span class="input-group-text me-2 w-25" id="basic-addon1">Enf. Neurológicas</span>
+        <div class="d-grid gap-2 d-md-block">
+          <button class="btn btn-primary" type="button">Button</button>
+          <button class="btn btn-primary" type="button">Button</button>
+        </div>
+      </div>
+    </form>
+  </div>
   <script src="./js/scripts.js"></script>
 </body>
 </html>
