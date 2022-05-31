@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <link rel="stylesheet" href="style.css">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Ficha Clinica</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,170 +14,406 @@
 
 
 </head>
-<body>
-  <!-- Barra de navegación -->
-  <nav class="navbar navbar-expand-lg navbar navbar-dark bg-secondary mb-5 ">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">
-        <img src="imagenes/logo-400x140.png" alt="" width="200" height="70">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
-          <li class="nav-item">
-            <a class="nav-link active text-black" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-black" href="#">Ayuda</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-black" href="#">Ficha de Observación</a>
-          </li>
-        </ul>
-        <span class="navbar-text ">
-            Escuela de salud
-            <br>
-            <p class="fst-italic">“Humanizando la atención en Salud”</p>
-
-        </span>
-      </div>
-    </div>
-  </nav>
-  <!-- Contenido -->
-  <!-- 1. Antecedentes Personales -->
-  <div class="mx-auto p-1" style="width: 700px;">
-    <form class="row g-3 mb-3 border border-secondary border-2 rounded-3">
-      <div class="input-group mb-3">
-        <input class="form-control" type="text" placeholder="1. Antecedentes Personales" aria-label="Disabled input example" disabled>
-        <span class="input-group-text" id="inputFecha">Fecha</span>
-        <span type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="inputFechaAct" disabled>
-      </div>
-      <div class="col-12">
-        <label for="inputAddress" class="form-label">Nombre</label>
-        <input type="text" class="form-control" id="inputNombre" placeholder="Ingrese nombre de paciente">
-      </div>
-      <div class="col-md-6">
-        <label for="inputEmail4" class="form-label">Rut</label>
-        <input type="email" class="form-control" maxlength="10" id="inputRut" placeholder="Ingrese Rut" onkeypress="return valideKey(event);">
-      </div>
-      <div class="col-md-6">
-        <label for="inputPassword4" class="form-label">Telefono</label>
-        <input type="text" class="form-control" maxlength="9" id="inputTelefono" placeholder="Ingrese Telefono" onkeypress="return valideKey(event);">
-      </div>
-      <div class="col-md-3">
-        <label for="inputAddress" class="form-label">Edad</label>
-        <input type="text" class="form-control" maxlength="2" id="inputEdad" placeholder="Ingrese edad" onkeypress="return valideKey(event);"/>
-      </div>
-      <div class="col-md-9">
-        <label for="inputAddress2" class="form-label">Fecha de nacimiento</label>
-        <input type="date" class="form-control" id="inputFechaN" placeholder="Escoja una fecha">
-      </div>
-      <div class="col-md-6">
-        <label for="inputCity" class="form-label">Estado civil</label>
-        <select id="inputEstCivil" class="form-select">
-          <option selected>Seleccione Estado Civil...</option>
-          <option>Casado(a)</option>
-          <option>Conviviente</option>
-          <option>Anulado(a)</option>
-          <option>Separado(a) de unión legal</option>
-          <option>Separado(a) de unión de hecho</option>
-          <option>Viudo(a)</option>
-          <option>Soltero(a)</option>
-        </select>
-      </div>
-      <div class="col-md-6">
-        <label for="inputCity" class="form-label">Previsión</label>
-        <select id="inputPrevision" class="form-select">
-          <option selected>Seleccione Previsión...</option>
-          <option>Casado(a)</option>
-          <option>Conviviente</option>
-          <option>Anulado(a)</option>
-          <option>Separado(a) de unión legal</option>
-          <option>Separado(a) de unión de hecho</option>
-          <option>Viudo(a)</option>
-          <option>Soltero(a)</option>
-        </select>
-      </div>
-      <div class="col-12">
-        <label for="inputAddress" class="form-label">Dirección</label>
-        <input type="text" class="form-control" id="inputDireccion" placeholder="Ingrese Dirección">
-      </div>
-      <div class="col-12 mb-3">
-        <label for="inputAddress" class="form-label">Ocupación</label>
-        <input type="text" class="form-control" id="inputOcupacion" placeholder="Ingrese Ocupación">
-      </div>
-    </form>
-  </div>
-  <!-- 2. Anamnesis Proxima -->
-  <div class="mx-auto p-1"style="width: 700px;">
-    <form class="row g-3 mb-3 border border-secondary border-2 rounded-3">
-      <div class="mb-3">
-        <input class="form-control mb-2" type="text" placeholder="2. Anamnesis Proxima" aria-label="Disabled input example" disabled>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-      </div>
-    </form>
-  </div> 
-  <!-- 3. Anamnesis Remota -->
-  <div class="mx-auto p-1"style="width: 700px;">
-    <form class="row g-3 mb-3 border border-secondary border-2 rounded-3">
-      <div class="mb-3">
-        <input class="form-control mb-2" type="text" placeholder="3. Anamnesis Remota" aria-label="Disabled input example" disabled>
-      </div>
-      <div class="mb-3 input-group ">
-        <span class="input-group-text me-2 w-25" id="basic-addon1">Farmacología</span>
-        <div class="d-grid gap-2 d-md-block">
-          <button class="btn btn-primary" type="button">Button</button>
-          <button class="btn btn-primary" type="button">Button</button>
+<body class="bg-light bg-gradient">
+  <div class="container-fluid">
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar navbar-dark bg-secondary mb-5 ">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="imagenes/logo-400x140.png" alt="" width="200" height="70">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menuItems">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+            <li class="nav-item">
+             <a class="nav-link active text-black" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-black" href="#">Ayuda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-black" href="#">Ficha de Observación</a>
+            </li>
+          </ul>
+          <span class="navbar-text ">
+          Escuela de salud
+          <br>
+          <p class="fst-italic">“Humanizando la atención en Salud”</p>
+          </span>
         </div>
       </div>
-      <div class="mb-3 input-group">
-        <span class="input-group-text me-2 w-25" id="basic-addon1">Enf. Crónicas</span>
-        <div class="d-grid gap-2 d-md-block">
-          <button class="btn btn-primary" type="button">Button</button>
-          <button class="btn btn-primary" type="button">Button</button>
+    </nav>
+    <!-- Contenido -->
+    <!-- 1. Antecedentes Personales -->
+    <div class="mx-auto p-1" style="width: 700px;">
+      <form class="row g-3 mb-3 border border-secondary border-2 rounded-3">
+        <div class="input-group mb-3">
+          <input class="form-control" type="text" placeholder="1. Antecedentes Personales" aria-label="Disabled input example" disabled>
+          <span class="input-group-text" id="inputFecha">Fecha</span>
+          <span type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="inputFechaAct" disabled>
         </div>
-      </div>      
-      <div class="mb-3 input-group">
-        <span class="input-group-text me-2 w-25" id="basic-addon1">Enf. Respiratorias</span>
-        <div class="d-grid gap-2 d-md-block">
-          <button class="btn btn-primary" type="button">Button</button>
-          <button class="btn btn-primary" type="button">Button</button>
+        <div class="col-12">
+          <label for="inputAddress" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="inputNombre" placeholder="Ingrese nombre de paciente">
         </div>
-      </div>      
-      <div class="mb-3 input-group">
-        <span class="input-group-text me-2 w-25" id="basic-addon1">Diabetes</span>
-        <div class="d-grid gap-2 d-md-block">
-          <button class="btn btn-primary" type="button">Button</button>
-          <button class="btn btn-primary" type="button">Button</button>
+        <div class="col-md-6">
+          <label for="inputEmail4" class="form-label">Rut</label>
+          <input type="email" class="form-control" maxlength="10" id="inputRut" placeholder="Ingrese Rut" onkeypress="return valideKey(event);">
         </div>
-        <div class="input-group mb-3 ms-auto p-2 bd-highlight">
-          <label class="input-group-text" for="inputGroupSelect01">Tipo</label>
-          <select class="form-control" id="inputGroupSelect01">
-            <option selected>Seleccione tipo...</option>
-            <option value="1">Tipo 1</option>
-            <option value="2">Tipo 2</option>
-            <option value="3">Tipo Gestional</option>
+        <div class="col-md-6">
+          <label for="inputPassword4" class="form-label">Telefono</label>
+          <input type="text" class="form-control" maxlength="9" id="inputTelefono" placeholder="Ingrese Telefono" onkeypress="return valideKey(event);">
+        </div>
+        <div class="col-md-3">
+          <label for="inputAddress" class="form-label">Edad</label>
+          <input type="text" class="form-control" maxlength="2" id="inputEdad" placeholder="Ingrese edad" onkeypress="return valideKey(event);"/>
+        </div>
+        <div class="col-md-9">
+          <label for="inputAddress2" class="form-label">Fecha de nacimiento</label>
+          <input type="date" class="form-control" id="inputFechaN" placeholder="Escoja una fecha">
+        </div>
+        <div class="col-md-6">
+          <label for="inputCity" class="form-label">Estado civil</label>
+          <select id="inputEstCivil" class="form-select">
+            <option selected>Seleccione Estado Civil...</option>
+            <option>Casado(a)</option>
+            <option>Conviviente</option>
+            <option>Anulado(a)</option>
+            <option>Separado(a) de unión legal</option>
+            <option>Separado(a) de unión de hecho</option>
+            <option>Viudo(a)</option>
+            <option>Soltero(a)</option>
           </select>
         </div>
-      </div>      
-      <div class="mb-3 input-group">
-        <span class="input-group-text me-2 w-25" id="basic-addon1">Enf. Cardiovasculares</span>
-        <div class="d-grid gap-2 d-md-block">
-          <button class="btn btn-primary" type="button">Button</button>
-          <button class="btn btn-primary" type="button">Button</button>
-        </div> 
-      </div>  
-      <div class="mb-3 input-group">
-        <span class="input-group-text me-2 w-25" id="basic-addon1">Enf. Neurológicas</span>
-        <div class="d-grid gap-2 d-md-block">
-          <button class="btn btn-primary" type="button">Button</button>
-          <button class="btn btn-primary" type="button">Button</button>
+        <div class="col-md-6">
+          <label for="inputCity" class="form-label">Previsión</label>
+          <select id="inputPrevision" class="form-select">
+            <option selected>Seleccione Previsión...</option>
+            <option>Fonasa A</option>
+            <option>Fonasa B</option>
+            <option>Fonasa C</option>
+            <option>Fonasa D</option>
+            <option>Isapre</option>
+          </select>
         </div>
-      </div>
-    </form>
+        <div class="col-12">
+          <label for="inputAddress" class="form-label">Dirección</label>
+          <input type="text" class="form-control" id="inputDireccion" placeholder="Ingrese Dirección">
+        </div>
+        <div class="col-12 mb-3">
+          <label for="inputAddress" class="form-label">Ocupación</label>
+          <input type="text" class="form-control" id="inputOcupacion" placeholder="Ingrese Ocupación">
+        </div>
+      </form>
+    </div>
+    <!-- 2. Anamnesis Proxima -->
+    <div class="mx-auto p-1"style="width: 700px;">
+      <form class="row g-3 mb-3 border border-secondary border-2 rounded-3">
+        <div class="mb-3">
+          <input class="form-control mb-2" type="text" placeholder="2. Anamnesis Proxima" aria-label="Disabled input example" disabled>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+      </form>
+    </div> 
+    <!-- 3. Anamnesis Remota -->
+    <div class="mx-auto p-1"style="width: 700px;">
+      <form class="row g-3 mb-3 border border-secondary border-2 rounded-3">
+        <div class="mb-3">
+          <input class="form-control mb-2" type="text" placeholder="3. Anamnesis Remota" aria-label="Disabled input example" disabled>
+        </div>
+        <div class="mb-3 input-group ">
+          <span class="input-group-text me-2 w-25" id="basic-addon1">Farmacología</span>
+          <div class="d-grid gap-2 d-md-block">
+            <input type="radio" class="btn-check" name="options1-outlined" id="primary1-outlined" autocomplete="off">
+            <label class="btn btn-outline-primary" for="primary1-outlined">Si</label>
+            <input type="radio" class="btn-check" name="options2-outlined" id="danger1-outlined" autocomplete="off">
+            <label class="btn btn-outline-danger" for="danger1-outlined">No</label>
+          </div>
+        </div>
+        <div class="mb-3 input-group">
+          <span class="input-group-text me-2 w-25" id="basic-addon1">Enf. Crónicas</span>
+          <div class="d-grid gap-2 d-md-block">
+            <input type="radio" class="btn-check" name="options3-outlined" id="primary2-outlined" autocomplete="off">
+            <label class="btn btn-outline-primary" for="primary2-outlined">Si</label>
+            <input type="radio" class="btn-check" name="options4-outlined" id="danger2-outlined" autocomplete="off">
+            <label class="btn btn-outline-danger" for="danger2-outlined">No</label>
+          </div>
+        </div>      
+        <div class="mb-3 input-group">
+          <span class="input-group-text me-2 w-25" id="basic-addon1">Enf. Respiratorias</span>
+          <div class="d-grid gap-2 d-md-block">
+            <input type="radio" class="btn-check" name="options5-outlined" id="primary3-outlined" autocomplete="off">
+            <label class="btn btn-outline-primary" for="primary3-outlined">Si</label>
+            <input type="radio" class="btn-check" name="options6-outlined" id="danger3-outlined" autocomplete="off">
+            <label class="btn btn-outline-danger" for="danger3-outlined">No</label>
+          </div>
+        </div>      
+        <div class="mb-3 input-group">
+          <span class="input-group-text me-2 w-25" id="basic-addon1">Diabetes</span>
+          <div class="d-grid gap-2 d-md-block">
+            <input type="radio" class="btn-check" name="options7-outlined" id="primary4-outlined" autocomplete="off">
+            <label class="btn btn-outline-primary" for="primary4-outlined">Si</label>
+            <input type="radio" class="btn-check" name="options8-outlined" id="danger4-outlined" autocomplete="off">
+            <label class="btn btn-outline-danger" for="danger4-outlined">No</label>
+          </div>
+          <div class="d-grid gap-2 d-md-block">
+            <span class="input-group-text mx-2 w-15" id="basic-addon1">Tipo</span>
+          </div>
+          <div class="d-grid gap-2 d-md-block">
+            <select class="form-select w-10" id="Default select example">
+              <option selected>Seleccione tipo...</option>
+              <option value="1">Tipo 1</option>
+              <option value="2">Tipo 2</option>
+              <option value="3">Tipo Gestional</option>
+            </select>
+          </div>
+        </div>      
+        <div class="mb-3 input-group">
+          <span class="input-group-text me-2 w-25" id="basic-addon1">Enf. Cardiovasculares</span>
+          <div class="d-grid gap-2 d-md-block">
+            <input type="radio" class="btn-check" name="options9-outlined" id="primary5-outlined" autocomplete="off">
+            <label class="btn btn-outline-primary" for="primary5-outlined">Si</label>
+            <input type="radio" class="btn-check" name="options10-outlined" id="danger5-outlined" autocomplete="off">
+            <label class="btn btn-outline-danger" for="danger5-outlined">No</label>
+          </div> 
+        </div>  
+        <div class="mb-3 input-group">
+          <span class="input-group-text me-2 w-25" id="basic-addon1">Enf. Neurológicas</span>
+          <div class="d-grid gap-2 d-md-block">
+            <input type="radio" class="btn-check" name="options11-outlined" id="primary6-outlined" autocomplete="off">
+            <label class="btn btn-outline-primary" for="primary6-outlined">Si</label>
+            <input type="radio" class="btn-check" name="options12-outlined" id="danger6-outlined" autocomplete="off">
+            <label class="btn btn-outline-danger" for="danger6-outlined">No</label>
+          </div>
+        </div>
+        <div class="mb-3 input-group">
+          <span class="input-group-text me-2 w-25" id="basic-addon1">Habitos</span>
+          <div class="d-grid gap-2 d-md-block">
+            <select class="form-select" aria-label="Default select example">
+              <option selected>Escoja un habito...</option>
+              <option value="1">Tabaco</option>
+              <option value="2">Drogas</option>
+              <option value="3">Alcohol</option>
+            </select>
+          </div>
+          <span class="input-group-text mx-2 w-15" id="basic-addon1">Otros</span>
+          <input type="text" class="form-control" id="inputDireccion" placeholder="Ingrese habito">
+        </div>
+        <div class="mb-3 input-group">
+          <span class="input-group-text me-2 w-30" id="basic-addon1">Altereaciones ortopédicas (especifique)</span>
+          <div class="d-grid gap-2 me-5 d-md-block">
+            <input type="radio" class="btn-check" name="options13-outlined" id="primary7-outlined" autocomplete="off">
+            <label class="btn btn-outline-primary" for="primary7-outlined">Si</label>
+            <input type="radio" class="btn-check" name="options14-outlined" id="danger7-outlined" autocomplete="off">
+            <label class="btn btn-outline-danger" for="danger7-outlined">No</label>
+          </div>
+          <div class="d-grid gap-2 mt-2 w-100 d-md-block">
+            <input type="text" class="form-control" id="inputDireccion" placeholder="Especifique">
+          </div>
+        </div>
+        <div class="mb-3 input-group">
+          <span class="input-group-text me-2 w-30" id="basic-addon1">Altereaciones circulatorias (especifique)</span>
+          <div class="d-grid gap-2 me-5 d-md-block">
+            <input type="radio" class="btn-check" name="options15-outlined" id="primary8-outlined" autocomplete="off">
+            <label class="btn btn-outline-primary" for="primary8-outlined">Si</label>
+            <input type="radio" class="btn-check" name="options16-outlined" id="danger8-outlined" autocomplete="off">
+            <label class="btn btn-outline-danger" for="danger8-outlined">No</label>
+          </div>
+          <div class="d-grid gap-2 mt-2 w-100 d-md-block">
+            <input type="text" class="form-control" id="inputDireccion" placeholder="Especifique">
+          </div>
+        </div>
+        <div class="mb-3 input-group">
+          <span class="input-group-text me-2 w-30" id="basic-addon1">Úlceras / Heridas (especifique)</span>
+          <div class="d-grid gap-2 me-5 d-md-block">
+            <input type="radio" class="btn-check" name="options17-outlined" id="primary9-outlined" autocomplete="off">
+            <label class="btn btn-outline-primary" for="primary9-outlined">Si</label>
+            <input type="radio" class="btn-check" name="options18-outlined" id="danger9-outlined" autocomplete="off">
+            <label class="btn btn-outline-danger" for="danger9-outlined">No</label>
+          </div>
+          <div class="d-grid gap-2 mt-2 w-100 d-md-block">
+            <input type="text" class="form-control" id="inputDireccion" placeholder="Especifique">
+          </div>
+        </div>
+        <div class="mb-3 input-group">
+          <span class="input-group-text me-2 w-30" id="basic-addon1">Alergia (especifique) medicamento-metal-látex-otros</span>
+          <div class="d-grid gap-2 me-5 d-md-block">
+            <input type="radio" class="btn-check" name="options19-outlined" id="primary10-outlined" autocomplete="off">
+            <label class="btn btn-outline-primary" for="primary10-outlined">Si</label>
+            <input type="radio" class="btn-check" name="options20-outlined" id="danger10-outlined" autocomplete="off">
+            <label class="btn btn-outline-danger" for="danger10-outlined">No</label>
+          </div>
+          <div class="d-grid gap-2 mt-2 w-100 d-md-block">
+            <input type="text" class="form-control" id="inputDireccion" placeholder="Especifique">
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <!-- 4. Examen fisico general y podologico -->
+    <div class="mx-auto p-1"style="width: 700px;">
+      <form class="row g-3 mb-3 border border-secondary border-2 rounded-3">
+        <div class="mb-3">
+          <input class="form-control mb-2" type="text" placeholder="4. Examen fisico general y podologico" aria-label="Disabled input example" disabled>
+        </div>
+        <div class="table-responsive">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th scope="col">P/A</th>
+                <th scope="col">HGT</th>
+                <th scope="col">FC</th>
+                <th scope="col">Peso</th>
+                <th scope="col">Talla</th>
+                <th scope="col">IMC</th>
+              </tr>
+            </thead>
+           <tbody>
+             <tr>
+                <td>
+                  <input type="text" class="w-100">
+                </td>
+                <td>
+                  <input type="text" class="w-100">
+                </td>
+                <td>
+                  <input type="text" class="w-100">
+                </td>
+                <td>
+                  <input type="text" class="w-100">
+                </td>
+                <td>
+                  <input type="text" class="w-100">
+                </td>
+                <td>
+                  <input type="text" class="w-100">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="mb-3 input-group">
+          <span class="input-group-text me-2 w-25" id="basic-addon1">Maculas Vasc. EE.II</span>
+          <div class="d-grid gap-2 d-md-block">
+            <input type="radio" class="btn-check" name="options21-outlined" id="primary11-outlined" autocomplete="off">
+            <label class="btn btn-outline-primary" for="primary11-outlined">Si</label>
+            <input type="radio" class="btn-check" name="options22-outlined" id="danger11-outlined" autocomplete="off">
+            <label class="btn btn-outline-danger" for="danger11-outlined">No</label>
+          </div>
+          <div class="d-grid gap-2 d-md-block">
+            <span class="input-group-text mx-2 w-15" id="basic-addon1">Tipo</span>
+          </div>
+          <div class="d-grid gap-2 d-md-block">
+            <select class="form-select w-100" id="Default select example">
+              <option selected>Seleccione tipo...</option>
+              <option value="1">Angiomas</option>
+              <option value="2">Telangiectasias</option>
+            </select>
+          </div>
+        </div>
+        <div class="mb-3 input-group">
+          <span class="input-group-text me-2 w-25" id="basic-addon1">Nevos</span>
+          <div class="d-grid gap-2 d-md-block">
+            <input type="radio" class="btn-check" name="options23-outlined" id="primary12-outlined" autocomplete="off">
+            <label class="btn btn-outline-primary" for="primary12-outlined">Si</label>
+            <input type="radio" class="btn-check" name="options24-outlined" id="danger12-outlined" autocomplete="off">
+            <label class="btn btn-outline-danger" for="danger12-outlined">No</label>
+          </div>
+          <span class="input-group-text mx-2 w-25" id="basic-addon1">Amputación</span>
+          <div class="d-grid gap-2 d-md-block">
+            <input type="radio" class="btn-check" name="options25-outlined" id="primary13-outlined" autocomplete="off">
+            <label class="btn btn-outline-primary" for="primary13-outlined">Si</label>
+            <input type="radio" class="btn-check" name="options26-outlined" id="danger13-outlined" autocomplete="off">
+            <label class="btn btn-outline-danger" for="danger13-outlined">No</label>
+          </div>
+        </div>
+        <!-- Falta la seccion de trofismo dermico -->
+        <div class="table-responsive">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Derecho</th>
+                <th scope="col">Izquierdo</th>
+              </tr>
+            </thead>
+           <tbody>
+              <tr>
+                <th scope="row">Pulso Pedio (+)(-)</th>
+                <td>
+                  <input type="text">
+                </td>
+                <td>
+                  <input type="text">
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Pulso Tibial (+)(-)</th>
+                <td>
+                  <input type="text">
+                </td>
+                <td>
+                  <input type="text">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="table-responsive">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Fria</th>
+                <th scope="col">Normal</th>
+                <th scope="col">Tibia</th>
+              </tr>
+            </thead>
+           <tbody>
+              <tr>
+                <th scope="row">Temperatura</th>
+                <td>
+                  <input class="form-check-input" type="radio" name="Radios" id="Radios1" value="option1"></td>
+                <td>
+                  <input class="form-check-input" type="radio" name="Radios" id="Radios2" value="option2"></td>
+                <td>
+                  <input class="form-check-input" type="radio" name="Radios" id="Radios3" value="option3"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="table-responsive">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Normal</th>
+                <th scope="col">Seca</th>
+                <th scope="col">Humeda</th>
+              </tr>
+            </thead>
+           <tbody>
+              <tr>
+                <th scope="row">Piel</th>
+                <td>
+                  <input class="form-check-input" type="radio" name="Radios" id="Radios1" value="option1"></td>
+                <td>
+                  <input class="form-check-input" type="radio" name="Radios" id="Radios2" value="option2"></td>
+                <td>
+                  <input class="form-check-input" type="radio" name="Radios" id="Radios3" value="option3"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label">Diagnostico</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+      </form>
+    </div>
+    <script src="./js/scripts.js"></script>
   </div>
-  <script src="./js/scripts.js"></script>
 </body>
 </html>
