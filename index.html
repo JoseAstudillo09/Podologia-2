@@ -60,15 +60,15 @@
         </div>
         <div class="col-md-6">
           <label for="inputEmail4" class="form-label">Rut</label>
-          <input type="email" class="form-control" maxlength="10" id="inputRut" placeholder="Ingrese Rut" onkeypress="return valideKey(event);">
+          <input type="text" inputmode="numeric, decimal" class="form-control" maxlength="10" id="inputRut" placeholder="Ingrese Rut" onkeypress="return valideKey(event);">
         </div>
         <div class="col-md-6">
           <label for="inputPassword4" class="form-label">Teléfono</label>
-          <input type="text" class="form-control" maxlength="9" id="inputTelefono" placeholder="Ingrese Telefono" onkeypress="return valideKey(event);">
+          <input type="text" inputmode="numeric, decimal" class="form-control" maxlength="9" id="inputTelefono" placeholder="Ingrese Telefono" onkeypress="return valideKey(event);">
         </div>
         <div class="col-md-3">
           <label for="inputAddress" class="form-label">Edad</label>
-          <input type="text" class="form-control" maxlength="2" id="inputEdad" placeholder="Ingrese edad" onkeypress="return valideKey(event);"/>
+          <input type="text" inputmode="numeric, decimal" class="form-control" maxlength="2" id="inputEdad" placeholder="Ingrese edad" onkeypress="return valideKey(event);"/>
         </div>
         <div class="col-md-9">
           <label for="inputAddress2" class="form-label">Fecha de nacimiento</label>
@@ -271,22 +271,22 @@
            <tbody>
              <tr>
                 <td>
-                  <input type="text" class="w-100" onkeypress="return valideKey(event);">
+                  <input type="text" inputmode="numeric, decimal" class="w-100" onkeypress="return valideKey(event);">
                 </td>
                 <td>
-                  <input type="text" class="w-100" onkeypress="return valideKey(event);">
+                  <input type="text" inputmode="numeric, decimal" class="w-100" onkeypress="return valideKey(event);">
                 </td>
                 <td>
-                  <input type="text" class="w-100" onkeypress="return valideKey(event);">
+                  <input type="text" inputmode="numeric, decimal" class="w-100" onkeypress="return valideKey(event);">
                 </td>
                 <td>
-                  <input type="text" class="w-100" onkeypress="return valideKey(event);">
+                  <input type="text" inputmode="numeric, decimal" class="w-100" onkeypress="return valideKey(event);">
                 </td>
                 <td>
-                  <input type="text" class="w-100" onkeypress="return valideKey(event);">
+                  <input type="text" inputmode="numeric, decimal" class="w-100" onkeypress="return valideKey(event);">
                 </td>
                 <td>
-                  <input type="text" class="w-100" onkeypress="return valideKey(event);">
+                  <input type="text" inputmode="numeric, decimal" class="w-100" onkeypress="return valideKey(event);">
                 </td>
               </tr>
             </tbody>
@@ -327,7 +327,6 @@
             <label class="btn btn-outline-danger" for="danger13-outlined">No</label>
           </div>
         </div>
-        <!-- Falta la seccion de trofismo dermico -->
         <div class="table-responsive">
           <table class="table table-bordered">
             <thead>
@@ -406,6 +405,7 @@
           </table>
         </div>
         <div class="mb-3">
+          <p class="fw-bold text-decoration-underline">Trofismo dermico</p>
           <label for="exampleFormControlTextarea1" class="form-label">Diagnostico</label>
           <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
         </div>
