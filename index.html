@@ -30,16 +30,16 @@
             <a class="nav-link active text-black" aria-current="page" href="#">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-black" href="#">Ayuda</a>
+            <a class="nav-link text-black" href="./ayuda.html">Ayuda</a>
           </li>
           <li class="nav-item">
             <a class="nav-link text-black" href="#">Ficha de Observación</a>
           </li>
         </ul>
         <span class="navbar-text ">
-        Escuela de salud
-        <br>
-        <p class="fst-italic">“Humanizando la atención en Salud”</p>
+          Escuela de salud
+          <br>
+          <p class="fst-italic">“Humanizando la atención en Salud”</p>
         </span>
       </div>
     </div>
@@ -412,10 +412,16 @@
   <!-- 5. Simbología -->
   <div class="mx-auto p-1">
     <form class="row g-3 mb-3 border border-secondary border-2 rounded-3 mx-2">
-      <div class="mb-1">
-        <input class="form-control mb-2" type="text" placeholder="5. Simbología" aria-label="Disabled input example" disabled>
-      </div>
-      <img src="./imagenes/img-simbologia.png" class="img-fluid mb-3" alt="">
+        <div class="mb-1">
+            <input class="form-control mb-2" type="text" placeholder="5. Simbología" aria-label="Disabled input example" disabled>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-responsive">
+                <thead>
+                    <th><img src="./imagenes/img-simbologia.png" class="img-fluid mb-3" alt=""></th>
+                </thead>
+            </table>
+        </div>
     </form>
   </div>
   <!-- 6. Morfologia del antepie -->
@@ -424,30 +430,44 @@
       <div class="mb-1">
         <input class="form-control mb-2" type="text" placeholder="6. Morfologia del antepie" aria-label="Disabled input example" disabled>
       </div>
-      <img src="./imagenes/tipos de pies.png" class="img-fluid mb-3" alt="">
-      <div class="mb-3 position-relative"> 
-        <div class="form-check form-check-inline position-absolute bottom-0">
-          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-          <label class="form-check-label" for="inlineRadio1">Egipcio</label>
-        </div>
-        <div class="form-check form-check-inline position-absolute bottom-0 start-50 translate-middle-x">
-          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-          <label class="form-check-label" for="inlineRadio2">Cuadrado</label>
-        </div>
-        <div class="form-check form-check-inline position-absolute bottom-0 end-0">
-          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
-          <label class="form-check-label" for="inlineRadio3">Griego</label>
-        </div>
+      <div class="table-responsive">
+        <table class="table table-bordered" >
+          <thead>
+            <th colspan="3"><img src="./imagenes/tipos de pies.png" class="img-fluid mb-3" alt=""></th>
+          </thead>
+          <tbody>
+            <tr class="align-middle">
+              <td>
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                  <label class="form-check-label" for="inlineRadio1">Egipcio</label>
+              </td>
+              <td>
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                  <label class="form-check-label" for="inlineRadio2">Cuadrado</label>
+              </td>
+              <td>
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                  <label class="form-check-label" for="inlineRadio3">Griego</label>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </form>
   </div>
   <!-- 7. Topografia Ungueal -->
   <div class="mx-auto p-1">
     <form class="row g-3 mb-3 border border-secondary border-2 rounded-3 mx-2">
-      <div class="mb-1">
-        <input class="form-control mb-2" type="text" placeholder="7. Topografia Ungueal" aria-label="Disabled input example" disabled>
-      </div>
-      <img src="./imagenes/topografia ungueal.png" class="img-fluid mb-3" alt="">
+        <div class="mb-1">
+            <input class="form-control mb-2" type="text" placeholder="7. Topografia Ungueal" aria-label="Disabled input example" disabled>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-responsive">
+                <thead>
+                    <th><img src="./imagenes/topografia ungueal.png" class="img-fluid mb-3" alt=""></th>
+                </thead>
+            </table>
+        </div>
     </form>
   </div>
   <!-- 8. Evolución -->
@@ -574,6 +594,117 @@
                   <label for="inputAddress" class="form-label">Tratante</label>
                   <input type="text" class="form-control" id="inputNombre" placeholder="Ingrese nombre del tratante">
                 </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </form>
+  </div>
+  <!-- Estudio de queratopatías -->
+  <div class="mx-auto p-1">
+    <form class="row g-3 mb-3 border border-secondary border-2 rounded-3 mx-2">
+      <div class="mb-1">
+        <input class="form-control mb-2" type="text" placeholder="Estudio de queratopatías" aria-label="Disabled input example" disabled>
+      </div>
+      <div class="table-responsive">'
+        <table class="table align-middle table-bordered">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>
+                <img src="./imagenes/img estudios.png" class="img-fluid mb-3" alt="">
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">PD</th>
+              <td>
+                <input type="text" class="w-75">
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">PI</th>
+              <td>
+                <input type="text" class="w-75">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </form>
+  </div>
+  <!-- Estudio Onicopatias -->
+  <div class="mx-auto p-1">
+    <form class="row g-3 mb-3 border border-secondary border-2 rounded-3 mx-2">
+      <div class="mb-1">
+        <input class="form-control mb-2" type="text" placeholder="Estudio Onicopatias" aria-label="Disabled input example" disabled>
+      </div>
+      <div class="table-responsive">'
+        <table class="table align-middle table-bordered">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>
+                <img src="./imagenes/img estudios.png" class="img-fluid mb-3" alt="">
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">PD</th>
+              <td>
+                <input type="text" class="w-75">
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">PI</th>
+              <td>
+                <input type="text" class="w-75">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </form>
+  </div>
+  <!-- Deformidades digitales -->
+  <div class="mx-auto p-1">
+    <form class="row g-3 mb-3 border border-secondary border-2 rounded-3 mx-2">
+      <div class="mb-1">
+        <input class="form-control mb-2" type="text" placeholder="Deformidades digitales" aria-label="Disabled input example" disabled>
+      </div>
+      <img src="./imagenes/img estudios.png" class="img-fluid mb-3" alt="">
+
+      <div class="table-responsive">
+        <table class="table align-middle table-bordered">
+          <tbody>
+            <tr>
+              <td>
+                PD
+                <input type="text">
+              </td>
+              <td>
+                PI
+                <input type="text">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>      
+      <img src="./imagenes/img estudios.png" class="img-fluid mb-3" alt="">
+      <div class="table-responsive">
+        <table class="table align-middle table-bordered">
+          <tbody>
+            <tr>
+              <td>
+                PD
+                <input type="text">
+              </td>
+              <td>
+                PI
+                <input type="text">
               </td>
             </tr>
           </tbody>
