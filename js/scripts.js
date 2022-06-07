@@ -14,6 +14,12 @@ function valideKey(evt){
 }
 
 
+function calculoImc(){
+  var peso = document.getElementById("peso").value;
+  var talla = document.getElementById("talla").value;
+
+  document.getElementById("imc").innerHTML = peso / Math.pow(talla,2);
+}
 
 
 date = new Date();
