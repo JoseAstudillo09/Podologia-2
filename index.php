@@ -1,3 +1,6 @@
+<?php
+include_once "conexion.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,10 +34,13 @@
             <a class="nav-link active text-dark" aria-current="page" href="#">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./ayuda.html">Ayuda</a>
+            <a class="nav-link" href="./ayuda.php">Ayuda</a>
           </li>
           <li class="nav-item">
             <a class="nav-link disabled">Ficha de observación</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./stockProd.php">Stock de insumos</a>
           </li>
         </ul>
         <span class="navbar-text ">
@@ -46,38 +52,39 @@
     </div>
   </nav>
   <!-- Contenido -->
-  <!-- 1. Antecedentes Personales -->
-  <div class="container-md">
+  <form method="POST">
+    <!-- 1. Antecedentes Personales -->
+    <div class="container-md">
     <div class="mx-auto p-1">
       <form class="row g-3 mb-3 border border-secondary border-2 rounded-3 mx-2">
         <div class="input-group mb-1">
           <input class="form-control" type="text" placeholder="1. Antecedentes Personales" aria-label="Disabled input example" disabled>
           <span class="input-group-text" id="inputFecha">Fecha</span>
-          <span type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="inputFechaAct" disabled>
+          <span type="text" class="form-control" aria-label="Sizing example input" name="fecha" aria-describedby="inputGroup-sizing-default" id="inputFechaAct" disabled>
         </div>
         <div class="col-12">
           <label for="inputAddress" class="form-label">Nombre</label>
-          <input type="text" class="form-control" id="inputNombre" placeholder="Ingrese nombre de paciente">
+          <input type="text" class="form-control" id="inputNombre" placeholder="Ingrese nombre de paciente" name="nombre">
         </div>
         <div class="col-md-6">
           <label for="inputEmail4" class="form-label">Rut</label>
-          <input type="text" inputmode="numeric, decimal" class="form-control" maxlength="10" id="inputRut" placeholder="Ingrese Rut" onkeypress="return valideKey(event);">
+          <input type="text" inputmode="numeric, decimal" class="form-control" maxlength="10" id="inputRut" placeholder="Ingrese Rut" name="rut" onkeypress="return valideKey(event);">
         </div>
         <div class="col-md-6">
           <label for="inputPassword4" class="form-label">Teléfono</label>
-          <input type="text" inputmode="numeric, decimal" class="form-control" maxlength="9" id="inputTelefono" placeholder="Ingrese Telefono" onkeypress="return valideKey(event);">
+          <input type="text" inputmode="numeric, decimal" class="form-control" maxlength="9" id="inputTelefono" placeholder="Ingrese Telefono" name="telefono" onkeypress="return valideKey(event);">
         </div>
         <div class="col-md-3">
           <label for="inputAddress" class="form-label">Edad</label>
-          <input type="text" inputmode="numeric, decimal" class="form-control" maxlength="2" id="inputEdad" placeholder="Ingrese edad" onkeypress="return valideKey(event);"/>
+          <input type="text" inputmode="numeric, decimal" class="form-control" maxlength="2" id="inputEdad" placeholder="Ingrese edad" name="edad" onkeypress="return valideKey(event);"/>
         </div>
         <div class="col-md-9">
           <label for="inputAddress2" class="form-label">Fecha de nacimiento</label>
-          <input type="date" class="form-control" id="inputFechaN" placeholder="Escoja una fecha">
+          <input type="date" class="form-control" id="inputFechaN" placeholder="Escoja una fecha" name="fechaNacimiento">
         </div>
         <div class="col-md-6">
           <label for="inputCity" class="form-label">Estado civil</label>
-          <select id="inputEstCivil" class="form-select">
+          <select id="inputEstCivil" class="form-select" name="estadoCivil">
             <option selected>Seleccione Estado Civil...</option>
             <option>Casado(a)</option>
             <option>Conviviente</option>
@@ -90,7 +97,7 @@
         </div>
         <div class="col-md-6">
           <label for="inputCity" class="form-label">Previsión</label>
-          <select id="inputPrevision" class="form-select">
+          <select id="inputPrevision" class="form-select" name="prevision">
             <option selected>Seleccione Previsión...</option>
             <option>Fondo Nacional De Salud (Fonasa)</option>
             <option>Isapre</option>
@@ -99,28 +106,28 @@
         </div>
         <div class="col-12">
           <label for="inputAddress" class="form-label">Dirección</label>
-          <input type="text" class="form-control" id="inputDireccion" placeholder="Ingrese Dirección">
+          <input type="text" class="form-control" id="inputDireccion" placeholder="Ingrese Dirección" name="direccion">
         </div>
         <div class="col-12 mb-3">
           <label for="inputAddress" class="form-label">Ocupación</label>
-          <input type="text" class="form-control" id="inputOcupacion" placeholder="Ingrese Ocupación">
+          <input type="text" class="form-control" id="inputOcupacion" placeholder="Ingrese Ocupación" name="ocupacion">
         </div>
       </form>
     </div>
-  </div>
-  <!-- 2. Anamnesis Proxima -->
-  <div class="container-md">
+    </div>
+    <!-- 2. Anamnesis Proxima -->
+    <div class="container-md">
     <div class="mx-auto p-1">
       <form class="row g-3 mb-3 border border-secondary border-2 rounded-3 mx-2">
         <div class="mb-3">
           <input class="form-control mb-2" type="text" placeholder="2. Anamnesis Proxima" aria-label="Disabled input example" disabled>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="anamnesisProx"></textarea>
         </div>
       </form>
     </div>
-  </div> 
-  <!-- 3. Anamnesis Remota -->
-  <div class="container-md">
+    </div> 
+    <!-- 3. Anamnesis Remota -->
+    <div class="container-md">
     <div class="mx-auto p-1">
       <form class="row g-3 mb-3 border border-secondary border-2 rounded-3 mx-2">
         <div class="mb-1">
@@ -254,9 +261,9 @@
         </div>
       </form>
     </div>
-  </div>
-  <!-- 4. Examen fisico general y podologico -->
-  <div class="container-md">
+    </div>
+    <!-- 4. Examen fisico general y podologico -->
+    <div class="container-md">
     <div class="mx-auto p-1">
       <form class="row g-3 mb-3 border border-secondary border-2 rounded-3 mx-2">
         <div class="mb-1">
@@ -417,9 +424,9 @@
         </div>
       </form>
     </div>
-  </div>
-  <!-- 5. Simbología -->
-  <div class="container-md">
+    </div>
+    <!-- 5. Simbología -->
+    <div class="container-md">
     <div class="mx-auto p-1">
       <form class="row g-3 mb-3 border border-secondary border-2 rounded-3 mx-2">
           <div class="mb-1">
@@ -434,9 +441,9 @@
           </div>
       </form>
     </div>
-  </div>
-  <!-- 6. Morfologia del antepie -->
-  <div class="container-md">
+    </div>
+    <!-- 6. Morfologia del antepie -->
+    <div class="container-md">
     <div class="mx-auto p-1">
       <form class="row g-3 mb-3 border border-secondary border-2 rounded-3 mx-2">
         <div class="mb-1">
@@ -467,9 +474,9 @@
         </div>
       </form>
     </div>
-  </div>
-  <!-- 7. Topografia Ungueal -->
-  <div class="container-md">
+    </div>
+    <!-- 7. Topografia Ungueal -->
+    <div class="container-md">
     <div class="mx-auto p-1">
       <form class="row g-3 mb-3 border border-secondary border-2 rounded-3 mx-2">
           <div class="mb-1">
@@ -484,9 +491,9 @@
           </div>
       </form>
     </div>
-  </div>
-  <!-- 8. Evolución -->
-  <div class="container-md">
+    </div>
+    <!-- 8. Evolución -->
+    <div class="container-md">
     <div class="mx-auto p-1">
       <form class="row g-3 mb-3 border border-secondary border-2 rounded-3 mx-2">
         <div class="mb-1">
@@ -617,9 +624,9 @@
         </div>
       </form>
     </div>
-  </div>
-  <!-- Estudio de queratopatías -->
-  <div class="container-md">
+    </div>
+    <!-- Estudio de queratopatías -->
+    <div class="container-md">
     <div class="mx-auto p-1">
       <form class="row g-3 mb-3 border border-secondary border-2 rounded-3 mx-2">
         <div class="mb-1">
@@ -653,9 +660,9 @@
         </div>
       </form>
     </div>
-  </div>
-  <!-- Estudio Onicopatias -->
-  <div class="container-md">
+    </div>
+    <!-- Estudio Onicopatias -->
+    <div class="container-md">
     <div class="mx-auto p-1">
       <form class="row g-3 mb-3 border border-secondary border-2 rounded-3 mx-2">
         <div class="mb-1">
@@ -689,9 +696,9 @@
         </div>
       </form>
     </div>
-  </div>
-  <!-- Deformidades digitales -->
-  <div class="container-md">
+    </div>
+    <!-- Deformidades digitales -->
+    <div class="container-md">
     <div class="mx-auto p-1">
       <form class="row g-3 mb-3 border border-secondary border-2 rounded-3 mx-2">
         <div class="mb-1">
@@ -741,7 +748,9 @@
         </div>
       </form>
     </div>
-  </div>
+    </div>
+    <button class="btn btn-primary">Enviar</button>
+  </form>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
   <script src="./js/scripts.js"></script>
 </body>

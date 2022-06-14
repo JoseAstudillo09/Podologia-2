@@ -17,7 +17,7 @@
     <!-- Barra de navegación -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-secondary mb-3">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="./index.php">
                 <img src="./imagenes/logo-400x140.png" alt="" width="150" height="70">
               </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,7 +29,10 @@
                 <a class="nav-link active text-dark" aria-current="page" href="#">Ayuda</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./index.html">Home</a>
+                <a class="nav-link" href="./index.php">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./stockProd.php">Stock de insumos</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link disabled">Ficha de observación</a>
