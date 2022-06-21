@@ -529,6 +529,7 @@ include_once "conexion.php";
                       Muy inadecuado
                     </label>
                   </div>
+<<<<<<< HEAD
                 </div>
               </td>
               <td>
@@ -748,6 +749,207 @@ include_once "conexion.php";
     </form>
   </div>
   </div>
+=======
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      Onicotomia
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      Despiculización
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      Resecado
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      Helotomia
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      Desbastado
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      Pulido
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      Asepsia final
+                    </label>
+                  </div>
+                </td>
+                <td class="align-top">
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="10"></textarea>
+                </td>
+              </tr>
+              <tr>
+                <td class="align-top">
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="6"></textarea>
+                </td>
+                <td>
+                  <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Otros:</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+                  </div>
+                </td>
+                <td>
+                  <div class="col-md-9">
+                    <label for="inputAddress2" class="form-label">Fecha</label>
+                    <input type="date" class="form-control" id="inputFechaN" placeholder="Escoja una fecha">
+                  </div>
+                  <div class="col-12">
+                    <label for="inputAddress" class="form-label">Tratante</label>
+                    <input type="text" class="form-control" id="inputNombre" placeholder="Ingrese nombre del tratante">
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </form>
+    </div>
+    </div>
+    <!-- Estudio de queratopatías -->
+    <div class="container-md">
+    <div class="mx-auto p-1">
+      <form class="row g-3 mb-3 border border-secondary border-2 rounded-3 mx-2">
+        <div class="mb-1">
+          <input class="form-control mb-2" type="text" placeholder="Estudio de queratopatías" aria-label="Disabled input example" disabled>
+        </div>
+        <div class="table-responsive">'
+          <table class="table align-middle table-bordered">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>
+                  <img src="./imagenes/img estudios.png" class="img-fluid mb-3" alt="">
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">PD</th>
+                <td>
+                  <input type="text" class="w-50">
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">PI</th>
+                <td>
+                  <input type="text" class="w-50">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </form>
+    </div>
+    </div>
+    <!-- Estudio Onicopatias -->
+    <div class="container-md">
+    <div class="mx-auto p-1">
+      <form class="row g-3 mb-3 border border-secondary border-2 rounded-3 mx-2">
+        <div class="mb-1">
+          <input class="form-control mb-2" type="text" placeholder="Estudio Onicopatias" aria-label="Disabled input example" disabled>
+        </div>
+        <div class="table-responsive">'
+          <table class="table align-middle table-bordered">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>
+                  <img src="./imagenes/img estudios.png" class="img-fluid mb-3" alt="">
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">PD</th>
+                <td>
+                  <input type="text" class="w-50">
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">PI</th>
+                <td>
+                  <input type="text" class="w-50">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </form>
+    </div>
+    </div>
+    <!-- Deformidades digitales -->
+    <div class="container-md">
+    <div class="mx-auto p-1">
+      <form class="row g-3 mb-3 border border-secondary border-2 rounded-3 mx-2">
+        <div class="mb-1">
+          <input class="form-control mb-2" type="text" placeholder="Deformidades digitales" aria-label="Disabled input example" disabled>
+        </div>
+        <div class="table-responsive">
+          <table class="table align-middle table-bordered">
+            <thead>
+              <th colspan="2"><img src="./imagenes/img estudios.png" class="img-fluid mb-3" alt=""></th>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">PD</th>
+                <td>
+                  <input type="text" class="w-50">
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">PI</th>
+                <td>
+                  <input type="text" class="w-50">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>      
+        <div class="table-responsive">
+          <table class="table align-middle table-bordered">
+            <thead>
+              <th colspan="2"><img src="./imagenes/img estudios.png" class="img-fluid mb-3" alt=""></th>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">PD</th>
+                <td>
+                  <input type="text" class="w-50">
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">PI</th>
+                <td>
+                  <input type="text" class="w-50">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </form>
+    </div>
+    </div>
+  </form>
+>>>>>>> e6ec1f6085ed289ecb6d08f7bb29420f1b9f19fe
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
   <script src="./js/scripts.js"></script>
 </body>
