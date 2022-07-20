@@ -1,5 +1,11 @@
 <?php
-include_once "conexion.php";
+  session_start();
+  if(!isset($_SESSION['nombre'])){
+    header('Location: login.php');
+  }
+  //elseif(isset($_SESSION['nombre'])){
+  //}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

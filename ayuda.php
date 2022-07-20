@@ -1,3 +1,9 @@
+<?php
+  session_start();
+  if(!isset($_SESSION['nombre'])){
+    header('Location: login.php');
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,98 +53,6 @@
         </div>
       </nav>
     <!-- Contenido -->
-    <!-- Valoración del calzado como adecuado o no -->
-    <div class="mx-auto p-1">
-        <form class="row g-3 mb-3 border border-secondary border-2 rounded-3 mx-2">
-            <div class="input-group mb-1">
-                <input class="form-control" type="text" placeholder="Valoración del calzado como adecuado o no" aria-label="Disabled input example" disabled>
-            </div>
-            <div class="table-responsive">
-                <table class="table table-bordered table-success table-striped">
-                    <thead>
-                        <tr>
-                            <th scope="col">Calzado de calle</th>
-                            <th scope="col">Calzado geriatrico</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                                Adecuado a su actividad física
-                            </td>
-                            <td>
-                                Adecuado a su actividad física
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Corte calzado: Materiales nobles
-                            </td>
-                            <td>
-                                Corte calzado: adecuado a la estación climática del año (felpa, lycra, tela).
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Volumen adecuado a su pie
-                            </td>
-                            <td>
-                                Volumen adecuado a su pie
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Tacón de altura adecuada
-                            </td>
-                            <td>
-                                Tacón de altura adecuada
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Suela ligera con dibujo multidireccional no muy flexible ni rígida
-                            </td>
-                            <td>
-                                Suela ligera con dibujo multidireccional no muy flexible ni rígida
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Costuras no lesivas
-                            </td>
-                            <td>
-                                Costuras lesivas
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                No deteriorada la suela
-                            </td>
-                            <td>
-                                No deteriorada la suela
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Parte trasera cerrada y con contrafuerte
-                            </td>
-                            <td>
-                                Parte trasera cerrada
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Puntera adecuada cerrada y no puntiaguda
-                            </td>
-                            <td>
-                                Puntera adecuada cerrada y no puntiaguda
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </form>
-    </div>
     <!-- Nomenclatura podológica -->
     <div class="mx-auto p-1">
         <form class="row g-3 mb-3 border border-secondary border-2 rounded-3 mx-2">

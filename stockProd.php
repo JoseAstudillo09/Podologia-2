@@ -1,11 +1,17 @@
-<?php 
-    include_once "conexion.php";
-?>
 <?php
+    session_start();
+
+  if(!isset($_SESSION['nombre'])){
+    header('Location: login.php');
+  }elseif(isset($_SESSION['nombre'])){
+    include_once "conexion.php";
+
     $cantidad = 0;
     $query = "SELECT Descripcion_Insumo, Tipo, Precio_Unitario, Cantidad FROM Insumos";
     $stmt = $conexion->query($query);
     $registros = $stmt->fetchAll(PDO::FETCH_OBJ);
+  }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -77,7 +83,7 @@
                                     <td class="column2"><?php echo $fila->Descripcion_Insumo; ?></td>
                                     <td class="column3"><?php echo $fila->Tipo; ?></td>
                                     <td class="column4"><?php echo $fila->Precio_Unitario; ?></td>
-                                    <td class="column5"><?php echo $fila->Cantidad; ?></td> 
+                                    <td class="column5"><?php echo $fila->Cantidad; ?></td>
                                 </tr>
                             <?php endforeach; ?>
                         </tbody>
